@@ -1,0 +1,29 @@
+follow the above details
+TrainingName                 -                                                                                Last Attempted History                                     Status
+1.Antimoney laundering awareness@{items('Apply_to_each')?['ANTI MONEY LAUNDERING AWARENESS']}                                                          @{items('Apply_to_each')?['Status1']}
+2.Group anti-corruption policy
+@{items('Apply_to_each')?['Group Anti-Corruption Policy']}                                                                                             @{items('Apply_to_each')?['Status2']}
+3.Business continuity management(BCM)
+@{items('Apply_to_each')?['BUSINESS CONTINUITY MANAGEMENT (BCM)']} @{items('Apply_to_each')?['Status3']}
+4.values and ethics assessment
+@{items('Apply_to_each')?['Values and Ethics Assessment']}                                                                                             @{items('Apply_to_each')?['Status4']}
+5.speaking up and non_ retaliation
+@{items('Apply_to_each')?['Speaking up and non-retaliation']}                                                                                          @{items('Apply_to_each')?['Status5']}
+6.understanding conflicts of interest
+@{items('Apply_to_each')?['​Understanding conflicts of interest']}                                                                                      @{items('Apply_to_each')?['Status6']}
+7.Harassment_free work environment
+@{items('Apply_to_each')?['​Harassment-free work environment']}                                                                                         @{items('Apply_to_each')?['Status7']}
+8.Group competition laws policy
+@{items('Apply_to_each')?['Group Competition Laws Policy']}                                                                                            @{items('Apply_to_each')?['Status8']}
+9.Module1:Internet,email & social maedia
+@{items('Apply_to_each')?['Module 1_x003a_ Internet, email and social media']}                                                                         @{items('Apply_to_each')?['Status9']}
+10.Module2:Cyber-risks &Everywhere               
+@{items('Apply_to_each')?['Module 2_x003a_ Cyber-risks and threats']}                                                                                  @{items('Apply_to_each')?['Status10']}
+11.Module3:Working securily Everywhere
+@{items('Apply_to_each')?['Module 3_x003a_ Working Securely Everywhere']}                                                                              @{items('Apply_to_each')?['Status11']}
+12.Module4:Data classification and security
+@{items('Apply_to_each')?['Module 4_x003a_ Data classification and security']}                                                                         @{items('Apply_to_each')?['Status12']}
+13.Module:Reporting security incidents
+@{items('Apply_to_each')?['Module 5_x003a_ Reporting Security Incidents']}                                                                             @{items('Apply_to_each')?['Status13']}
+14.Understanding Privacy
+@{items('Apply_to_each')?['Understanding Privacy']}                                                                                                    @{items('Apply_to_each')?['Status14']}                                                    

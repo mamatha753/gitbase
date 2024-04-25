@@ -1,0 +1,61 @@
+@Autowired
+	JwtService jwtService;
+	
+
+    @Autowired
+    private JwtFilter jwtFilter;
+	
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(jwtService);
+	}
+	
+	@Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+//        http.csrf()
+//                .disable()
+//                .authorizeRequests()
+//                .antMatchers("/authenticate","/users/add")
+//               
+    	http
+        .cors()
+        .configurationSource(this.corsConfigurationSource())
+        .and()
+        .csrf()
+        .disable()
+        .authorizeRequests()
+        .antMatchers("/authenticate","/users/add")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+
+    }
+    
+   
+    CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList("*"));
+        configuration.setAllowedMethods(Arrays.asList("GET","POST"));
+        configuration.setAllowCredentials(true);
+        //the below three lines will add the relevant CORS response headers
+        configuration.addAllowedOrigin("*");
+        configuration.addAllowedHeader("*");
+        configuration.addAllowedMethod("*");
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+	
+	
+}
+
